@@ -1,1 +1,3 @@
 Secciones en las que estoy de Flutter Legacy
+
+Sección 10 Tipo de dato Booleanos y condiciones
