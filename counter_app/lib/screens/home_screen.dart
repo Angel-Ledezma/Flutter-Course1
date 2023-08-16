@@ -8,24 +8,32 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
 
     const fontSize30 = TextStyle(fontSize: 30);
+    int counter = 0;
 
     return Scaffold(
       appBar: AppBar(
         title: const Center(
           child: Text('HomeScreen')
           ),
-          elevation: 10,
+          elevation: 0,
       ),
-        body: const Center(
+        body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             //crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Text('Tabs Counter', style: fontSize30 ),
-              Text('12', style: fontSize30 ),
+              const Text('Tabs Counter', style: fontSize30 ),
+              Text('$counter', style: fontSize30 ),
             ],
           ),
         ),
+        //floatingActionButtonLocation: FloatingActionButtonLocation.miniStartFloat,
+        floatingActionButton: FloatingActionButton(
+          child: const Icon(Icons.add),
+          onPressed: () { 
+            counter++;
+            print('Hola Mundo: $counter');
+           },),
     );
   }
   
